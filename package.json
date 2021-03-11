@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build:vite": "vite build",
-    "build:webpack": "webpack"
+    "build:webpack": "webpack --mode production"
   },
   "dependencies": {
     "react": "^17.0.0",
@@ -13,13 +13,15 @@
   "devDependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
     "@babel/preset-react": "^7.12.10",
-    "babel-loader": "^8.2.2",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.1",
     "raw-loader": "^4.0.2",
     "string-replace-loader": "^3.0.1",
     "style-loader": "^2.0.0",
     "svg-url-loader": "^7.1.1",
+    "ts-loader": "^8.0.18",
     "vite": "^1.0.0-rc.13",
     "vite-plugin-react": "^4.0.0",
     "webpack": "^4.46.0",
