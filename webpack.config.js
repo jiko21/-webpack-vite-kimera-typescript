@@ -8,13 +8,13 @@ const enableSourceMap = MODE === 'development';
 
 module.exports = {
   mode: "development",
-  entry: "./src/main.jsx",
+  entry: "./src/main.tsx",
   output: {
     path: path.resolve(__dirname, 'dist-webpack'),
     filename: "bundle.js"
   },
   resolve: {
-    extensions: [".js", ".jsx", ".js"]
+    extensions: [".ts", ".tsx", ".js"]
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -24,9 +24,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.(tsx|ts)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'ts-loader'
       },
       {
         test: /\.(css)/,
@@ -61,7 +61,7 @@ module.exports = {
         test: /\.html$/,
         loader: 'string-replace-loader',
         options: {
-          search: '  <script type="module" src="/src/main.jsx"></script>',
+          search: '  <script type="module" src="/src/main.tsx"></script>',
           replace: '',
         }
       }
